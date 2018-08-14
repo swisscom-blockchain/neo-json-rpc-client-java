@@ -1,4 +1,4 @@
-package com.swisscom.neo.rpc;
+package com.github.swisscom_blockchain.neo.rpcclient;
 
 public class NeoRpcRuntimeException extends RuntimeException {
 

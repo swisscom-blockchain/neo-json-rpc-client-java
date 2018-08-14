@@ -1,4 +1,4 @@
-package com.swisscom.neo.rpc.dto;
+package com.github.swisscom_blockchain.neo.rpcclient.dto;
 
 import java.util.ArrayList;
 import java.util.List;

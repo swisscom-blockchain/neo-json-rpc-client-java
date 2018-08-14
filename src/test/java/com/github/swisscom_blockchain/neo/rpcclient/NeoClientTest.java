@@ -1,7 +1,7 @@
-package com.swisscom.neo.rpc;
+package com.github.swisscom_blockchain.neo.rpcclient;
 
+import com.github.swisscom_blockchain.neo.rpcclient.dto.NeoBlock;
 import com.googlecode.jsonrpc4j.JsonRpcHttpClient;
-import com.swisscom.neo.rpc.dto.NeoBlock;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,11 +18,11 @@ public class NeoClientTest {
     @Before
     public void init() {
         String endpoint = System.getenv("endpoint");
-        String basicUser = System.getenv("neo");
-        String basicAuth = System.getenv("7NVa4MWM");
+        String basicUser = System.getenv("basicUser");
+        String basicPass = System.getenv("basicPass");
 
         JsonRpcHttpClient client = JsonRpcHttpClientUtil.create(endpoint);
-        JsonRpcHttpClientUtil.addBasicAuth(client, basicUser, basicAuth);
+        JsonRpcHttpClientUtil.addBasicAuth(client, basicUser, basicPass);
         JsonRpcHttpClientUtil.enableTrustAllCerts(client);
 
         neoClient = new NeoClient(client);

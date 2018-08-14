@@ -1,7 +1,7 @@
-package com.swisscom.neo.rpc;
+package com.github.swisscom_blockchain.neo.rpcclient;
 
 import com.googlecode.jsonrpc4j.JsonRpcHttpClient;
-import com.swisscom.neo.rpc.dto.NeoBlock;
+import com.github.swisscom_blockchain.neo.rpcclient.dto.NeoBlock;
 
 import java.util.ArrayList;
 import java.util.List;
