@@ -6,7 +6,7 @@
     <groupId>com.github.swisscom-blockchain</groupId>
     <artifactId>neo-rpcclient</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>neo-json-rpc-client-java</name>
     <description>JSON-RPC Client for NEO</description>
     <url>https://github.com/swisscom-blockchain/neo-json-rpc-client-java</url>

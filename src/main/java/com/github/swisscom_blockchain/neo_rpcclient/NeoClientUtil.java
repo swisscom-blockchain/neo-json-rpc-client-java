@@ -16,7 +16,7 @@ import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JsonRpcHttpClientUtil {
+public class NeoClientUtil {
 
     private static final TrustManager[] TRUST_ALL_MANAGER = new TrustManager[]{new X509TrustManager() {
         public X509Certificate[] getAcceptedIssuers() {
@@ -38,12 +38,19 @@ public class JsonRpcHttpClientUtil {
         }
     }
 
+    /**
+     * Adding basic authentication
+     * @param client
+     * @param user
+     * @param password
+     */
     public static void addBasicAuth(JsonRpcHttpClient client, String user, String password) {
         try {
             String credential = user + ":" + password;
             String basicAuth = DatatypeConverter.printBase64Binary(credential.getBytes("UTF-8"));
 
             Map<String, String> headers = new HashMap<>();
+            headers.putAll(client.getHeaders());
             headers.put("Authorization", "Basic " + basicAuth);
             client.setHeaders(headers);
         } catch (UnsupportedEncodingException ex) {
@@ -51,6 +58,10 @@ public class JsonRpcHttpClientUtil {
         }
     }
 
+    /**
+     * Disables any kind of SSL/HTTPS certifcation or hostname checks.
+     * @param client
+     */
     public static void enableTrustAllCerts(JsonRpcHttpClient client) {
         client.setHostNameVerifier((x, y) -> true);
         client.setSslContext(trustAllSSLContext());

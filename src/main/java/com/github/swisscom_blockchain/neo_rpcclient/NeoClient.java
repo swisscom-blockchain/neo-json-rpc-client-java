@@ -10,6 +10,12 @@ public class NeoClient {
 
     private final JsonRpcHttpClient client;
 
+    /**
+     * Constructor requires a JSONRpcHttpClient. Initialize it by yourself.
+     * Or have a look at "NeoClientUtil".
+     *
+     * @param client
+     */
     public NeoClient(JsonRpcHttpClient client) {
         this.client = client;
     }

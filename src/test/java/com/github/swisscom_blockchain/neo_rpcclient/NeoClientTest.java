@@ -21,9 +21,9 @@ public class NeoClientTest {
         String basicUser = System.getenv("basicUser");
         String basicPass = System.getenv("basicPass");
 
-        JsonRpcHttpClient client = JsonRpcHttpClientUtil.create(endpoint);
-        JsonRpcHttpClientUtil.addBasicAuth(client, basicUser, basicPass);
-        JsonRpcHttpClientUtil.enableTrustAllCerts(client);
+        JsonRpcHttpClient client = NeoClientUtil.create(endpoint);
+        NeoClientUtil.addBasicAuth(client, basicUser, basicPass);
+        NeoClientUtil.enableTrustAllCerts(client);
 
         neoClient = new NeoClient(client);
     }
