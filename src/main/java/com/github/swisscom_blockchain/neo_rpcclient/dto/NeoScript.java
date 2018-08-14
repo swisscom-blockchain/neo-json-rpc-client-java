@@ -1,4 +1,4 @@
-package com.github.swisscom_blockchain.neo.rpcclient.dto;
+package com.github.swisscom_blockchain.neo_rpcclient.dto;
 
 
 public class NeoScript {

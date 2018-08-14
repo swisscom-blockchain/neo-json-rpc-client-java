@@ -1,6 +1,6 @@
-package com.github.swisscom_blockchain.neo.rpcclient;
+package com.github.swisscom_blockchain.neo_rpcclient;
 
-import com.github.swisscom_blockchain.neo.rpcclient.dto.NeoBlock;
+import com.github.swisscom_blockchain.neo_rpcclient.dto.NeoBlock;
 import com.googlecode.jsonrpc4j.JsonRpcHttpClient;
 import org.junit.Before;
 import org.junit.Test;

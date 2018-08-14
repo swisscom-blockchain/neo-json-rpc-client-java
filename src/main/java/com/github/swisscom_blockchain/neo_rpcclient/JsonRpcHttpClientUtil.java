@@ -1,4 +1,4 @@
-package com.github.swisscom_blockchain.neo.rpcclient;
+package com.github.swisscom_blockchain.neo_rpcclient;
 
 import com.googlecode.jsonrpc4j.JsonRpcHttpClient;
 import javax.net.ssl.HttpsURLConnection;
