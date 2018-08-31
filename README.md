@@ -19,6 +19,21 @@ mvn clean package -DskipTests
 
 ## How to use
 
+Gradle import
+```
+compile 'com.github.swisscom-blockchain:neo-rpcclient:1.2'
+```
+
+Maven import
+```xml
+<dependency>
+    <groupId>com.github.swisscom-blockchain</groupId>
+    <artifactId>neo-rpcclient</artifactId>
+    <version>1.2</version>
+    <scope>compile</scope>
+</dependency>
+```
+
 Plain HTTP connection or HTTPS with trusted certificate
 ```java
 JsonRpcHttpClient client = NeoClientUtil.create("http://your-node:22332");
