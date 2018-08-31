@@ -6,7 +6,7 @@
     <groupId>com.github.swisscom-blockchain</groupId>
     <artifactId>neo-rpcclient</artifactId>
     <packaging>jar</packaging>
-    <version>1.1</version>
+    <version>1.2</version>
     <name>neo-json-rpc-client-java</name>
     <description>JSON-RPC Client for NEO</description>
     <url>https://github.com/swisscom-blockchain/neo-json-rpc-client-java</url>
@@ -63,6 +63,13 @@
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
             <version>1.3</version>
             <scope>test</scope>
         </dependency>

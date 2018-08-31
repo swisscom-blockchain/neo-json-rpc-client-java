@@ -9,15 +9,30 @@ Network:
 - Basic Authentication
 - SSL and trust all certification manager
 
-Neo JSON-RPC
-- getbestblockhash
-- getconnectioncount
-- getblock
+Supported JSON-RPC methods. See the [changelog](./CHANGELOG.md)
 
 ## Build
 Building without tests
 ```
 mvn clean package -DskipTests
+```
+
+## How to use
+
+Plain HTTP connection or HTTPS with trusted certificate
+```java
+JsonRpcHttpClient client = NeoClientUtil.create("http://your-node:22332");
+
+NeoBlock block = neoClient.getBestBlock();
+```
+
+With HTTPS disabled certifcate check and Basic Authentication
+```java
+JsonRpcHttpClient client = NeoClientUtil.create("https://your-node:22332");
+NeoClientUtil.addBasicAuth(client, "user", "password");
+NeoClientUtil.enableTrustAllCerts(client);
+
+NeoBlock block = neoClient.getBestBlock();
 ```
 
 ## Testing
